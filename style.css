@@ -101,9 +101,10 @@ textarea {
 
 
 .logo img {
-
-    width: 175px;
-
+    width: 120px;
+    height: auto;
+    display: block;
+    object-fit: contain;
 }
 
 
