@@ -1618,3 +1618,504 @@ footer {
         transition-duration: 0.01ms !important;
     }
 }
+
+/* =====================================================
+   SERVICES NAVBAR DROPDOWN
+===================================================== */
+
+.nav-dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.services-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 12px 0;
+    border: 0;
+    background: transparent;
+    color: #425466;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: color 0.3s ease;
+}
+
+.services-toggle:hover,
+.nav-dropdown.dropdown-open .services-toggle {
+    color: var(--blue);
+}
+
+.dropdown-arrow {
+    display: inline-block;
+    font-size: 17px;
+    line-height: 1;
+    transition: transform 0.25s ease;
+}
+
+.nav-dropdown.dropdown-open .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+.services-menu {
+    position: absolute;
+    top: calc(100% + 5px);
+    left: -15px;
+    z-index: 1200;
+    width: 285px;
+    max-height: 70vh;
+    overflow-y: auto;
+    padding: 8px;
+    background: #ffffff;
+    border: 1px solid #e1e8ef;
+    border-radius: 12px;
+    box-shadow: 0 16px 40px rgba(16, 42, 67, 0.16);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(8px);
+
+    transition:
+        opacity 0.22s ease,
+        visibility 0.22s ease,
+        transform 0.22s ease;
+}
+
+.nav-dropdown.dropdown-open .services-menu,
+.nav-dropdown:focus-within .services-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.services-menu a {
+    display: block;
+    padding: 11px 13px;
+    color: var(--text);
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.6;
+    white-space: normal;
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        padding-left 0.2s ease;
+}
+
+.services-menu a::after {
+    display: none;
+}
+
+.services-menu a:hover,
+.services-menu a:focus-visible {
+    padding-left: 18px;
+    color: var(--blue);
+    background: #edf5fc;
+    outline: none;
+}
+
+.services-toggle:focus-visible,
+.mobile-menu:focus-visible {
+    outline: 2px solid var(--orange);
+    outline-offset: 4px;
+}
+
+
+/* =====================================================
+   CLICKABLE SERVICE TITLES
+===================================================== */
+
+.service-card h3 a {
+    display: inline;
+    color: inherit;
+    font: inherit;
+    text-decoration: none;
+}
+
+.service-card h3 a:hover {
+    color: var(--orange);
+}
+
+.service-card:hover h3 a,
+.service-card:focus-within h3 a {
+    color: #ffffff;
+}
+
+.service-card .learn-more {
+    display: inline-block;
+    margin-top: auto;
+    padding-top: 5px;
+}
+
+.service-card .learn-more:focus-visible {
+    outline: 2px solid var(--orange-light);
+    outline-offset: 4px;
+}
+
+
+/* =====================================================
+   SERVICE DETAILS HERO
+===================================================== */
+
+.service-details-hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 390px;
+    margin-top: 82px;
+    padding: 75px 8%;
+    overflow: hidden;
+    text-align: center;
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(35, 137, 215, 0.28),
+            transparent 35%
+        ),
+        linear-gradient(135deg, #062b4a, #1261a0);
+}
+
+.service-details-hero::before {
+    content: "";
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    top: -120px;
+    left: -80px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.service-details-hero-inner {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+}
+
+.service-details-hero .small-title {
+    color: var(--orange-light);
+}
+
+.service-details-hero h1 {
+    margin: 18px 0;
+    color: #ffffff;
+    font-size: clamp(32px, 5vw, 54px);
+    font-weight: 700;
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+}
+
+.service-details-hero p {
+    max-width: 760px;
+    margin: 0 auto 28px;
+    color: rgba(255, 255, 255, 0.86);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.service-details-hero .primary-btn {
+    margin-top: 5px;
+}
+
+
+/* =====================================================
+   SERVICE DETAILS CONTENT
+===================================================== */
+
+.service-details-content {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 30px 95px;
+}
+
+.service-details-heading,
+.service-benefits-heading {
+    margin-bottom: 28px;
+    text-align: center;
+}
+
+.service-details-heading h2,
+.service-benefits-heading h2 {
+    margin-top: 10px;
+    color: var(--blue-dark);
+    font-size: clamp(26px, 3.5vw, 36px);
+    line-height: 1.3;
+}
+
+.service-page-paragraphs {
+    max-width: 900px;
+    margin: 0 auto 65px;
+}
+
+.service-page-paragraphs p {
+    margin-bottom: 20px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 2;
+}
+
+.service-benefits-heading {
+    margin-bottom: 30px;
+}
+
+.service-benefits {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.benefit-card {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    min-width: 0;
+    min-height: 115px;
+    padding: 24px;
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    box-shadow: 0 6px 22px rgba(16, 42, 67, 0.04);
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--orange);
+    box-shadow: 0 12px 28px rgba(16, 42, 67, 0.09);
+}
+
+.benefit-number {
+    color: #b3c1ce;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.benefit-check {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+    color: #ffffff;
+    background: var(--blue);
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.benefit-card h3 {
+    align-self: center;
+    color: var(--blue-dark);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.7;
+}
+
+.service-directory-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.service-directory-link:hover h3 {
+    color: var(--blue);
+}
+
+.service-directory-link:focus-visible {
+    outline: 2px solid var(--orange);
+    outline-offset: 3px;
+}
+
+.service-details-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 55px;
+}
+
+.details-secondary-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 13px 22px;
+    color: var(--blue-dark);
+    background: #ffffff;
+    border: 1px solid #ccd9e5;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    transition:
+        color 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.details-secondary-btn:hover {
+    color: #ffffff;
+    background: var(--blue);
+    border-color: var(--blue);
+}
+
+.service-disclaimer {
+    max-width: 760px;
+    margin: 45px auto 0;
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.9;
+    text-align: center;
+}
+
+
+/* =====================================================
+   FOOTER SERVICE LINKS
+===================================================== */
+
+.footer-column a:focus-visible,
+.footer-bottom a:focus-visible {
+    color: var(--orange-light);
+    outline: 1px solid var(--orange-light);
+    outline-offset: 3px;
+}
+
+
+/* =====================================================
+   TABLET AND MOBILE NAVIGATION
+===================================================== */
+
+@media (max-width: 1100px) {
+    .services-menu {
+        width: 270px;
+    }
+}
+
+@media (max-width: 760px) {
+    .main-nav .nav-dropdown {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        border-bottom: 1px solid #edf1f5;
+    }
+
+    .main-nav .services-toggle {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 13px 8px;
+        font-size: 14px;
+        text-align: left;
+    }
+
+    .main-nav .services-menu {
+        position: static;
+        display: none;
+        width: 100%;
+        max-height: 45vh;
+        overflow-y: auto;
+        padding: 5px 0 10px 12px;
+        border: 0;
+        border-radius: 0;
+        background: #f8fafc;
+        box-shadow: none;
+
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: none;
+    }
+
+    .main-nav .nav-dropdown.dropdown-open .services-menu {
+        display: block;
+    }
+
+    .main-nav .nav-dropdown:focus-within .services-menu {
+        transform: none;
+    }
+
+    .main-nav .services-menu a {
+        padding: 11px 12px;
+        border-bottom: 1px solid #e9eef3;
+        font-size: 12px;
+    }
+
+    .main-nav .services-menu a:hover {
+        padding-left: 17px;
+    }
+
+    .service-details-hero {
+        min-height: 340px;
+        margin-top: 75px;
+        padding: 60px 6%;
+    }
+
+    .service-details-content {
+        padding: 60px 6%;
+    }
+
+    .service-page-paragraphs {
+        margin-bottom: 45px;
+    }
+
+    .service-page-paragraphs p {
+        font-size: 13px;
+    }
+
+    .service-benefits {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .benefit-card {
+        min-height: 90px;
+        padding: 20px;
+    }
+
+    .service-details-actions {
+        flex-direction: column;
+        align-items: stretch;
+        margin-top: 40px;
+    }
+
+    .service-details-actions .primary-btn,
+    .service-details-actions .details-secondary-btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 420px) {
+    .service-details-hero h1 {
+        font-size: 31px;
+    }
+
+    .service-details-hero p {
+        font-size: 12px;
+    }
+
+    .service-details-content {
+        padding: 50px 5%;
+    }
+
+    .benefit-card h3 {
+        font-size: 12px;
+    }
+}
