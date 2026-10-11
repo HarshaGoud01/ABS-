@@ -1,0 +1,341 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn more about ABS TAXHUB, our approach to tax preparation, tax planning, and client support.">
+
+    <title>About Us | ABS TAXHUB</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .about-page-hero {
+            padding: 100px 7%;
+            text-align: center;
+            color: #fff;
+            background: linear-gradient(135deg, #082b55, #1264a3);
+        }
+
+        .about-page-hero .small-title {
+            color: #d8eaff;
+            letter-spacing: 3px;
+        }
+
+        .about-page-hero h1 {
+            font-size: clamp(34px, 5vw, 54px);
+            margin: 18px 0;
+            font-weight: 800;
+        }
+
+        .about-page-hero p {
+            max-width: 780px;
+            margin: 0 auto;
+            line-height: 1.9;
+            font-size: 17px;
+        }
+
+        .about-page-content {
+            max-width: 1150px;
+            margin: auto;
+            padding: 75px 25px;
+        }
+
+        .about-page-section {
+            margin-bottom: 55px;
+        }
+
+        .about-page-section h2 {
+            color: #103e70;
+            font-size: clamp(25px, 3vw, 34px);
+            margin-bottom: 18px;
+        }
+
+        .about-page-section p {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.9;
+            margin-bottom: 16px;
+        }
+
+        .about-values {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 24px;
+            margin-top: 28px;
+        }
+
+        .about-value-card {
+            padding: 28px;
+            border: 1px solid #e1e9f2;
+            border-radius: 12px;
+            background: #f7faff;
+        }
+
+        .about-value-card h3 {
+            color: #103e70;
+            margin: 0 0 12px;
+            font-size: 20px;
+        }
+
+        .about-value-card p {
+            margin: 0;
+        }
+
+        .about-page-cta {
+            text-align: center;
+            padding: 55px 25px;
+            border-radius: 14px;
+            background: #f0f6fd;
+        }
+
+        .about-page-cta h2 {
+            color: #103e70;
+            margin-bottom: 14px;
+        }
+
+        .about-page-cta p {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+
+        @media (max-width: 768px) {
+            .about-page-hero {
+                padding: 70px 22px;
+            }
+
+            .about-values {
+                grid-template-columns: 1fr;
+            }
+
+            .about-page-content {
+                padding: 50px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="header">
+    <a href="index.html#home" class="logo">
+        <img src="images/logo.jpeg" alt="ABS TAXHUB Logo">
+    </a>
+
+    <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <a href="index.html#home">Home</a>
+        <a href="about-us.html">About Us</a>
+
+        <div class="nav-dropdown" id="servicesDropdown">
+            <button class="services-toggle" id="servicesToggle"
+                    type="button" aria-expanded="false"
+                    aria-controls="servicesMenu">
+                Services <span class="dropdown-arrow"></span>
+            </button>
+
+            <div class="services-menu" id="servicesMenu">
+                <a href="service-details.html?service=federal-state-filing">Federal &amp; State Filing</a>
+                <a href="service-details.html?service=itin-processing">ITIN Processing</a>
+                <a href="service-details.html?service=amendment">Amendment</a>
+                <a href="service-details.html?service=advance-tax-planning">Advance Tax Planning</a>
+                <a href="service-details.html?service=extension-filing">Extension Filing</a>
+                <a href="service-details.html?service=tax-representation">Tax Representation</a>
+                <a href="service-details.html?service=student-tax-filing">Student Tax Filing</a>
+                <a href="service-details.html?service=fbar-fatca">FBAR &amp; FATCA Processing</a>
+                <a href="service-details.html?service=tax-consultation">Free Expert Tax Consultation</a>
+            </div>
+        </div>
+
+        <a href="index.html#contact">Contact Us</a>
+    </nav>
+
+    <div class="header-trust">
+        <div class="header-tagline">
+            <span class="tagline-top">Your Taxes,</span>
+            <span class="tagline-bottom">Our Expertise.</span>
+        </div>
+        <img src="images/irs.png" alt="IRS logo" class="header-irs-logo">
+    </div>
+
+    <button class="mobile-menu" id="mobileMenu" type="button"
+            aria-label="Open menu" aria-expanded="false">☰</button>
+</header>
+
+<main>
+    <section class="about-page-hero">
+        <span class="small-title">GET TO KNOW US</span>
+        <h1>About ABS TAXHUB</h1>
+        <p>
+            Professional Tax Solutions, Built Around Your Needs.
+            We help individuals and businesses navigate tax preparation,
+            filing and planning with a focus on clarity, organization
+            and personalized assistance.
+        </p>
+    </section>
+
+    <section class="about-page-content">
+
+        <div class="about-page-section">
+            <span class="small-title">WHO WE ARE</span>
+            <h2>Your Tax Needs, Our Professional Support</h2>
+
+            <p>
+                At ABS TAXHUB, we believe that tax filing should be simple,
+                organized and stress-free. We provide tax preparation,
+                filing and planning assistance tailored to the needs of
+                individuals, partnerships and corporations across the
+                United States.
+            </p>
+
+            <p>
+                Every taxpayer has different requirements. Our approach
+                focuses on understanding your situation, helping you
+                identify the services relevant to your needs and guiding
+                you through the applicable tax preparation and filing
+                process.
+            </p>
+
+            <p>
+                Whether you need assistance with an individual tax return,
+                business tax filing, an ITIN application, an amendment or
+                tax-related documentation, our team is available to discuss
+                your requirements and help you understand the next steps.
+            </p>
+        </div>
+
+        <div class="about-page-section">
+            <span class="small-title">OUR APPROACH</span>
+            <h2>How We Work With Our Clients</h2>
+
+            <p>
+                We aim to make tax-related processes easier to understand
+                by providing clear communication, organized assistance and
+                support based on each client's circumstances.
+            </p>
+
+            <div class="about-values">
+                <div class="about-value-card">
+                    <h3>Client-Focused Support</h3>
+                    <p>
+                        We take your requirements into account and help you
+                        identify suitable tax services for your situation.
+                    </p>
+                </div>
+
+                <div class="about-value-card">
+                    <h3>Clear Communication</h3>
+                    <p>
+                        We aim to explain the process, required documents
+                        and next steps in a straightforward manner.
+                    </p>
+                </div>
+
+                <div class="about-value-card">
+                    <h3>Organized Assistance</h3>
+                    <p>
+                        We help clients navigate applicable filing
+                        requirements, documentation and tax-related tasks.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="about-page-section">
+            <span class="small-title">WHAT WE DO</span>
+            <h2>Tax Services for Different Needs</h2>
+
+            <p>
+                ABS TAXHUB offers assistance across a range of tax-related
+                services, including federal and state tax filing, ITIN
+                processing, tax return amendments, extension filing,
+                advance tax planning and tax representation support.
+            </p>
+
+            <p>
+                We also provide assistance relating to student tax filing,
+                FBAR and FATCA requirements, and tax consultations.
+                The appropriate service depends on your circumstances
+                and applicable requirements.
+            </p>
+
+            <a href="index.html#services" class="primary-btn">
+                Explore Our Services →
+            </a>
+        </div>
+
+        <div class="about-page-cta">
+            <h2>Let's Make Your Tax Process Simpler</h2>
+
+            <p>
+                Have questions about your tax requirements?
+                Get in touch with ABS TAXHUB to discuss your needs
+                and explore the available services.
+            </p>
+
+            <a href="index.html#contact" class="primary-btn">
+                Contact Our Team →
+            </a>
+        </div>
+
+    </section>
+</main>
+
+<footer>
+    <div class="footer-grid">
+        <div class="footer-about">
+            <img src="images/logo.jpeg" alt="ABS TAXHUB" class="footer-logo">
+            <p>
+                ABS TAXHUB provides professional tax preparation, filing,
+                planning and related assistance for individuals and businesses.
+            </p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Services</h3>
+            <a href="service-details.html?service=federal-state-filing">Federal &amp; State Filing</a>
+            <a href="service-details.html?service=itin-processing">ITIN Processing</a>
+            <a href="service-details.html?service=amendment">Amendment</a>
+            <a href="service-details.html?service=advance-tax-planning">Advance Tax Planning</a>
+            <a href="service-details.html?service=extension-filing">Extension Filing</a>
+            <a href="service-details.html?service=tax-representation">Tax Representation</a>
+            <a href="service-details.html?service=student-tax-filing">Student Tax Filing</a>
+            <a href="service-details.html?service=fbar-fatca">FBAR &amp; FATCA Processing</a>
+            <a href="service-details.html?service=tax-consultation">Free Expert Tax Consultation</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Company</h3>
+            <a href="index.html#home">Home</a>
+            <a href="about-us.html">About Us</a>
+            <a href="index.html#services">All Services</a>
+            <a href="index.html#contact">Contact Us</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Contact</h3>
+            <a href="mailto:info@abstaxhub.com">info@abstaxhub.com</a>
+            <a href="https://wa.me/916301637993"
+               target="_blank" rel="noopener noreferrer">+91 63016 37993</a>
+            <a href="https://wa.me/19175251992"
+               target="_blank" rel="noopener noreferrer">+1 917-525-1992</a>
+            <p>1056 Route<br>Toms River, NJ 08755</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 ABS TAXHUB. All rights reserved.</p>
+        <div>
+            <a href="index.html#contact">Contact Us</a>
+            <a href="index.html#home">Back to Home</a>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
