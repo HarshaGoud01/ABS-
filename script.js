@@ -166,6 +166,7 @@ function closeMobileNavigation() {
     if (!mobileMenu || !mainNav) return;
 
     mainNav.classList.remove("mobile-active");
+
     mobileMenu.setAttribute("aria-expanded", "false");
     mobileMenu.setAttribute("aria-label", "Open menu");
     mobileMenu.textContent = "☰";
@@ -180,6 +181,7 @@ if (mobileMenu && mainNav) {
             "aria-label",
             isOpen ? "Close menu" : "Open menu"
         );
+
         mobileMenu.textContent = isOpen ? "×" : "☰";
     });
 
@@ -263,6 +265,7 @@ if (
 
     function createTextElement(tagName, textContent, className) {
         const element = document.createElement(tagName);
+
         element.textContent = textContent;
 
         if (className) {
@@ -297,7 +300,12 @@ if (
                 "benefit-number"
             );
 
-            const icon = createTextElement("span", "✓", "benefit-check");
+            const icon = createTextElement(
+                "span",
+                "✓",
+                "benefit-check"
+            );
+
             const heading = createTextElement("h3", benefit);
 
             card.append(number, icon, heading);
@@ -305,7 +313,9 @@ if (
         });
     } else {
         document.title = "Our Tax Services | ABS TAXHUB";
+
         servicePageTitle.textContent = "Explore Our Tax Services";
+
         servicePageDescription.textContent =
             "Choose a service below to learn more about our tax assistance.";
 
@@ -323,10 +333,18 @@ if (
             const link = document.createElement("a");
 
             link.className = "benefit-card service-directory-link";
-            link.href = "service-details.html?service=" + encodeURIComponent(key);
 
-            link.appendChild(createTextElement("span", "→", "benefit-check"));
-            link.appendChild(createTextElement("h3", item.title));
+            link.href =
+                "service-details.html?service=" +
+                encodeURIComponent(key);
+
+            link.appendChild(
+                createTextElement("span", "→", "benefit-check")
+            );
+
+            link.appendChild(
+                createTextElement("h3", item.title)
+            );
 
             serviceBenefits.appendChild(link);
         });
@@ -334,24 +352,39 @@ if (
 }
 
 
+
 // =====================================================
-// APPOINTMENT FORM
+// APPOINTMENT FORM - FORMSUBMIT
 // =====================================================
+
 
 const appointmentForm = document.getElementById("appointmentForm");
 
 if (appointmentForm) {
     appointmentForm.addEventListener("submit", function (event) {
-        event.preventDefault();
 
-        alert(
-            "Thank you for contacting ABS TAXHUB! " +
-            "Your appointment request has been received."
-        );
+        // Validate the form before submission
+        if (!appointmentForm.checkValidity()) {
+            event.preventDefault();
+            appointmentForm.reportValidity();
+            return;
+        }
 
-        appointmentForm.reset();
+        // Prevent accidental double-clicks
+        const submitButton = document.getElementById("submitButton");
+
+        if (submitButton) {
+            submitButton.disabled = true;
+            submitButton.textContent = "Submitting...";
+        }
+
+        // Allow the browser to submit the form normally
+        // FormSubmit will process it and handle the redirect.
     });
 }
+
+
+
 
 
 // =====================================================
@@ -361,11 +394,13 @@ if (appointmentForm) {
 const sliderTrack = document.querySelector(".hero-slider-track");
 const slides = document.querySelectorAll(".hero-slide");
 const dots = document.querySelectorAll(".slider-dot");
+
 const nextButton = document.getElementById("nextSlide");
 const prevButton = document.getElementById("prevSlide");
 
 let currentSlide = 0;
 let sliderTimer = null;
+
 const slideTime = 5000;
 
 function moveSlider() {
@@ -397,7 +432,9 @@ function nextSlide() {
 function previousSlide() {
     if (slides.length < 2) return;
 
-    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    currentSlide =
+        (currentSlide - 1 + slides.length) % slides.length;
+
     moveSlider();
 }
 
