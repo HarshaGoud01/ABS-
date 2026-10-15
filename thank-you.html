@@ -1,0 +1,270 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Thank you for contacting ABS TAXHUB. Your appointment request has been submitted successfully.">
+
+    <title>Thank You | ABS TAXHUB</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --blue: #1261a0;
+            --orange: #f28c28;
+            --green: #25d366;
+            --light-bg: #f4f8fc;
+            --text: #333333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--light-bg);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background: #ffffff;
+            min-height: 82px;
+            padding: 12px 7%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .logo img {
+            max-height: 58px;
+            max-width: 210px;
+            object-fit: contain;
+        }
+
+        .header-contact {
+            color: var(--blue);
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 50px 20px;
+        }
+
+        .thank-you-card {
+            background: #ffffff;
+            width: 100%;
+            max-width: 680px;
+            padding: 48px 35px;
+            text-align: center;
+            border-radius: 16px;
+            box-shadow: 0 8px 35px rgba(18, 97, 160, 0.10);
+        }
+
+        .success-icon {
+            width: 90px;
+            height: 90px;
+            margin: 0 auto 25px;
+            border-radius: 50%;
+            background: #e7f8ed;
+            color: #219653;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            font-weight: 600;
+        }
+
+        h1 {
+            color: var(--blue);
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .intro {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #555555;
+            margin-bottom: 28px;
+        }
+
+        .next-steps {
+            background: #f4f8fc;
+            border-left: 4px solid var(--orange);
+            padding: 22px;
+            border-radius: 8px;
+            text-align: left;
+            margin: 25px 0 30px;
+        }
+
+        .next-steps h2 {
+            color: var(--blue);
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .next-steps p {
+            color: #555555;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-family: inherit;
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.3s ease;
+        }
+
+        .btn-primary {
+            background: var(--blue);
+            color: #ffffff;
+        }
+
+        .btn-primary:hover {
+            background: #0d4c80;
+            transform: translateY(-2px);
+        }
+
+        .btn-whatsapp {
+            background: var(--green);
+            color: #ffffff;
+        }
+
+        .btn-whatsapp:hover {
+            background: #1eae55;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background: #ffffff;
+            text-align: center;
+            padding: 18px 15px;
+            font-size: 12px;
+            color: #666666;
+            border-top: 1px solid #eeeeee;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding: 12px 5%;
+            }
+
+            .logo img {
+                max-width: 155px;
+                max-height: 48px;
+            }
+
+            .header-contact {
+                font-size: 12px;
+            }
+
+            .thank-you-card {
+                padding: 35px 22px;
+            }
+
+            h1 {
+                font-size: 25px;
+            }
+
+            .intro {
+                font-size: 14px;
+            }
+
+            .buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" class="logo">
+            <img src="images/logo.jpeg" alt="ABS TAXHUB Logo">
+        </a>
+
+        <a href="mailto:info@abstaxhub.com" class="header-contact">
+            Contact Us
+        </a>
+    </header>
+
+    <main>
+        <section class="thank-you-card">
+
+            <div class="success-icon" aria-label="Success">✓</div>
+
+            <h1>Thank You for Contacting Us!</h1>
+
+            <p class="intro">
+                Your appointment request has been submitted successfully.
+                Thank you for choosing <strong>ABS TAXHUB</strong>.
+                Our team will review your details and contact you soon.
+            </p>
+
+            <div class="next-steps">
+                <h2>What Happens Next?</h2>
+                <p>
+                    Our team will review your appointment request and get in
+                    touch with you using the contact details you provided.
+                    If you have any questions, you can reach us by email or
+                    WhatsApp.
+                </p>
+            </div>
+
+            <div class="buttons">
+                <a href="index.html" class="btn btn-primary">
+                    ← Back to Home
+                </a>
+
+                <a href="https://wa.me/916301637993"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="btn btn-whatsapp">
+                    Contact Us on WhatsApp
+                </a>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        © 2026 ABS TAXHUB. All Rights Reserved.
+    </footer>
+
+</body>
+</html>
+```
